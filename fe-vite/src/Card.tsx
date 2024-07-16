@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from 'graphql-hooks';
-
-const HELLO_QUERY = `
-	query Hello{ 
-		hello
-	}`;
+import { HELLO_QUERY } from './lib/queries';
 
 function Card() {
 	const [count, setCount] = useState(0);

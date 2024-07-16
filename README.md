@@ -4,17 +4,34 @@
 
 ### Backend
 
-- `npm run dev`
+- `npm run dev:backend`
 
 ### Frontend
 
 We have multiple run options:
 
-#### Vite
-
-- `cd fe-vite`
-- `npm run dev`
+- `npm run dev:fe-vite`
+- `npm run dev:fe-next`
 
 ### Docker
 
 - `docker compose up -d --force-recreate mono --build`
+
+### Access:
+
+#### Graphiql
+
+- `http://localhost:4000/`
+
+#### Vite
+
+- `http://localhost:5173`
+
+#### Next
+
+- Apollo Explorer: `http://localhost:3000/api/graphql`
+- Client: `http://localhost:3000`
+
+## Docs
+
+- `https://graphql.org/community/tools-and-libraries/`

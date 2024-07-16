@@ -1,22 +1,10 @@
 import express from "express";
 import { createHandler } from "graphql-http/lib/use/express";
-import { buildSchema } from "graphql";
 import { ruruHTML } from "ruru/server";
 import cors from "cors";
- 
-// Construct a schema, using GraphQL schema language
-const schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
- 
-// The root provides a resolver function for each API endpoint
-const root = {
-  hello() {
-    return "Hello world!"
-  },
-};
+
+import { schema } from "./schema/typeDefs";
+import { root } from "./schema/resolvers";
  
 const app = express();
  
@@ -27,7 +15,7 @@ app.use(cors());
 app.all(
   "/graphql",
   createHandler({
-    schema: schema,
+    schema,
     rootValue: root,
   })
 );

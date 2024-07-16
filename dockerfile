@@ -7,5 +7,5 @@ WORKDIR /usr/mono
 COPY . ./
 RUN npm i
 
-EXPOSE 5173 4000
+EXPOSE 5173 4000 3000
 CMD ["npm","run","dev","--host"]
