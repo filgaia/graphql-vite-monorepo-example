@@ -8,4 +8,4 @@ COPY . ./
 RUN npm i
 
 EXPOSE 5173 4000 3000
-CMD ["npm","run","dev","--host"]
+CMD ["npm","run","dev:container","--host"]

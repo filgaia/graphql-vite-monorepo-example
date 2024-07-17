@@ -1,5 +1,10 @@
 export const HELLO_QUERY = `
   query Hello{ 
-      hello
+    hello
+    persons {
+      age
+      lastname
+      name
+    }
   }
 `;

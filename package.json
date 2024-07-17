@@ -10,10 +10,11 @@
   "scripts": {
     "postinstall": "npm run build -w backend",
     "build": "npm run build -w backend",
-    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:fe-vite\" \"npm:dev:fe-next\"",
+    "dev:container": "concurrently \"npm:dev:backend\" \"npm:dev:fe-vite\" \"npm:dev:fe-next\"",
     "dev:backend": "npm run dev -w backend",
     "dev:fe-vite": "npm run dev -w fe-vite",
-    "dev:fe-next": "npm run dev -w fe-next"
+    "dev:fe-next": "npm run dev -w fe-next",
+    "dev:vite": "concurrently \"npm:dev:backend\" \"npm:dev:fe-vite\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
