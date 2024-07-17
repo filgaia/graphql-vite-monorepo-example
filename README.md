@@ -34,4 +34,28 @@ We have multiple run options:
 
 ## Docs
 
-- `https://graphql.org/community/tools-and-libraries/`
+- [Tools and Libraries](https://graphql.org/community/tools-and-libraries/)
+- [TSConfig](https://www.typescriptlang.org/tsconfig)
+- [Getting Started: Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/)
+- [Vite Guide](https://vitejs.dev/guide/)
+
+## How to create this POC Step by Step
+
+### Backend
+
+```terminal
+mkdir backend
+npm init --yes && npm pkg set type="module"
+npm i --save @apollo/server graphql
+mkdir src
+touch src/index.ts
+npm i --save-dev typescript @types/node
+touch tsconfig.json
+```
+
+### Frontend
+
+```terminal
+npm create vite frontend --template react-ts
+npm i --save graphql-hooks graphql
+```
